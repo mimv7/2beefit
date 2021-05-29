@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>help-css</title>
+    <meta property="og:description" content="Данный сайт является помощником для верстальщика . Маленикие хитрости расписанны в комментариях кода">
+    <meta property="og:image" content="image/logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/favicon.ico.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>МРВ</h2>
+        </header>
+        <nav class="menu" id="main__menu">
+            <button class="menu__toggle" id="toggle__menu" ><!--гамбургер-->
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="menu__dropdown"><!--главменю-->
+            <ul class="site__nav"><!--flex контейнер-->
+                <li><a href="http://htmlbook.ru" target="_blank">htmlbook.ru</a></li><!--флекс элементы-->
+                <li><a href="position.html">Позиционирование и анимация</a></li>
+                <li><a href="cascading.html">каскадность</a></li>
+                <li><a href="grid.html">Grid</a></li>
+                
+                <li class="nav__right"><a href="https://vk.com/romanmels">О нас</a></li>
+            </ul>
+            </div>
+        </nav>
+        <main class="flex">
+            <div class="column__main tile">
+                <h1>Корректная верстка поможет легче работать с сайтом</h1>
+                <p>
+                    Тысячи людей пользуются сайтами, а лишь некоторые делают сайты. 
+                    Заходи в панель разработчика чтобы посмотреть как применяются те или иные свойства.
+                </p>
+                <div class="sourse__js">
+                    <a href="js.html" target="_blank"><span>js подсказка</span></a>
+                </div>
+            </div>
+            <div class="column__sidebar">
+                <div class="tile">
+                    <form class="login__form" action="sql.php">
+                        <h3>Авторизация</h3>
+                        <p>
+                            <label for="username">Логин:</label>
+                            <input type="text" id="username" name="username"/>
+                        </p>
+                        <p>
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password"/>
+                        </p>
+
+
+                        <button type="submit">Войти</button>
+                    </form>
+                </div>
+                <div class="tile centered">
+                    <small>Свойства justify-content и align-items</small>
+                    <div class="cost">
+                        <span class="cost__currency">$</span>
+                        <span class="cost__roubles">123</span>
+                        <span class="cost__kopecks">.00</span>
+                    </div>
+                    <a class="cta__button" href="">Зарегистрироваться</a>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <p>&copy На сайте используются материалы с сайта htmlbook.ru
+                 и из серии книг Джона Дакетта</p>
+            <p>&copy верстка Мелешин Роман</p>
+        </footer>
+    </div>
+    <!--скрипт для бургера-->
+    <script type="text/javascript">
+        (function(){
+            var button = document.getElementById('toggle__menu');
+            button.addEventListener('click',function(event){
+                event.preventDefault();
+                var menu = document.getElementById('main__menu');
+                menu.classList.toggle('is-open');
+            });
+        })();
+    </script>
+</body>
+</html>
